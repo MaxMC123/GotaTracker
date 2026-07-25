@@ -1,0 +1,6 @@
+{
+  "name": "GotaTracker",
+  "description": "Aplicación de seguimiento de hidratación inteligente con cálculo de meta personalizada, recordatorios, análisis de patrones y diseño Material 3.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

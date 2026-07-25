@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bell, Flame, User, LayoutGrid, Sparkles } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
+import { AppIcon } from '../common/AppIcon';
 
 export const Header: React.FC = () => {
   const { user, currentStreak, setIsReminderModalOpen, setIsWidgetModalOpen, setIsAuthModalOpen } = useApp();
@@ -26,10 +27,13 @@ export const Header: React.FC = () => {
         </button>
 
         <div>
-          <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400 leading-tight">
-            {greeting()}
-          </p>
-          <h1 className="text-base font-bold text-slate-800 dark:text-slate-100 truncate max-w-[150px]">
+          <div className="flex items-center gap-1.5">
+            <AppIcon size={16} />
+            <p className="text-[11px] font-bold text-slate-500 dark:text-slate-400 leading-tight">
+              GotaTracker • {greeting()}
+            </p>
+          </div>
+          <h1 className="text-base font-bold text-slate-800 dark:text-slate-100 truncate max-w-[160px]">
             {user?.name || 'Hola, Hidratado'}
           </h1>
         </div>

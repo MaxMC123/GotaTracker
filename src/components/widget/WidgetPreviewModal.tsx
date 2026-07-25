@@ -2,6 +2,7 @@ import React from 'react';
 import { X, Plus, Sparkles, LayoutGrid, Check } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { formatMlOrL } from '../../services/calculator';
+import { AppIcon } from '../common/AppIcon';
 
 export const WidgetPreviewModal: React.FC = () => {
   const { isWidgetModalOpen, setIsWidgetModalOpen, todayTotalMl, dailyGoalMl, todayProgressPercent, addWaterLog } = useApp();
@@ -35,8 +36,8 @@ export const WidgetPreviewModal: React.FC = () => {
           <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
 
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+            <div className="flex items-center gap-1.5">
+              <AppIcon size={16} />
               <span className="text-[11px] font-bold text-slate-300">GotaTracker Widget</span>
             </div>
             <span className="text-[10px] bg-blue-900/60 text-cyan-300 px-2 py-0.5 rounded-full font-bold">

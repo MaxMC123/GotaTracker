@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Lock, Mail, User, ShieldCheck, ArrowRight, Check } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
+import { AppIcon } from '../common/AppIcon';
 
 export const AuthModal: React.FC = () => {
   const { isAuthModalOpen, setIsAuthModalOpen, authMode, setAuthMode, loginUser, registerUser, user } = useApp();
@@ -40,9 +41,7 @@ export const AuthModal: React.FC = () => {
         {/* Header */}
         <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-slate-800">
           <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-blue-600 text-white font-black text-xs">
-              💧
-            </div>
+            <AppIcon size={28} />
             <h3 className="font-bold text-sm text-slate-800 dark:text-slate-100">
               {authMode === 'login' ? 'Iniciar Sesión' : authMode === 'register' ? 'Crear Cuenta GotaTracker' : 'Recuperar Contraseña'}
             </h3>

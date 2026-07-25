@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Smartphone, Monitor, Battery, Wifi, Signal } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
+import { AppIcon } from '../common/AppIcon';
 
 interface AndroidFrameProps {
   children: React.ReactNode;
@@ -27,7 +28,7 @@ export const AndroidFrame: React.FC<AndroidFrameProps> = ({ children }) => {
       {/* Top Floating Control Bar for Frame & Dark Mode Toggle */}
       <header className="w-full max-w-md md:max-w-4xl mb-3 px-4 flex items-center justify-between text-xs font-medium text-slate-600 dark:text-slate-400">
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+          <AppIcon size={20} />
           <span className="font-semibold text-blue-600 dark:text-blue-400">GotaTracker Android M3</span>
         </div>
 
